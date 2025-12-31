@@ -1,0 +1,34 @@
+{
+    "name": "noki/large-csv-converter",
+    "description": "Laravel package for fast and memory-efficient CSV and Excel conversion using Box/Spout.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Noki\\LargeCsvConverter\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "openspout/openspout": "^5.2",
+        "ext-zip": "*",
+        "ext-xmlreader": "*"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Noki\\LargeCsvConverter\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Noki\\LargeCsvConverter\\LargeCsvConverterServiceProvider"
+            ],
+            "aliases": {
+                "LargeCsvConverter": "Noki\\LargeCsvConverter\\Facades\\LargeCsvConverterFacade"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
